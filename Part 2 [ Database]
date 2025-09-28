@@ -1,0 +1,18 @@
+CREATE DATABASE fashion_store;
+
+USE fashion_store;
+
+CREATE TABLE inventory (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    item_name VARCHAR(100) NOT NULL,
+    total_bought INT NOT NULL,
+    total_sold INT NOT NULL,
+    price_per_item DECIMAL(10,2) NOT NULL
+);
+
+-- Example data
+INSERT INTO inventory (item_name, total_bought, total_sold, price_per_item)
+VALUES 
+('Elegant Dress', 100, 30, 50.00),
+('Stylish Shoes', 150, 60, 35.00),
+('Winter Jacket', 80, 20, 70.00);
